@@ -33,5 +33,15 @@ class ApiController extends Controller {
     public function register(Request $request) {
         $data = $request::all();
     }
+    
+    
+    /**
+     * function that persists experiences
+     * i.e post in the database
+     * @return \Illuminate\Http\Response
+     */
+    public function createPost(Request $request) {
+        $data = $request::all();
+    }
 
 }
