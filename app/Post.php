@@ -7,7 +7,7 @@ use App\Category;
 
 class Post extends PostModel
 {
-    public function posts()
+    public function categories()
     {
         return $this->belongsTo(Category::class);
     }
