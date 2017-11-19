@@ -14,3 +14,6 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+//Use Case: /posts_near_destination?distance=100&location=42.32232,12.31
+Route::get('/posts_near_destination', 'GeoPostController@postsNearDestination');
