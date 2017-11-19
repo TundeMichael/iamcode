@@ -15,7 +15,7 @@ class ApiController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function getFeed(Request $request) {
-        $data = $request::all();
+        $data = $request->all();
         $latlong = isset($data['location']) ? $data['location'] : '42.32232,12.31312121';
         $distance = isset($data['distance']) ? $data['distance'] : 1000;
         $categories = Category::with(['posts' => function($query) use ($distance, $latlong) {
@@ -31,7 +31,7 @@ class ApiController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function register(Request $request) {
-        $data = $request::all();
+        $data = $request->all();
     }
     
     
