@@ -1,3 +1,11 @@
 vendor
 .env
 .c9
+node_modules
+vendor
+public/storage
+storage/*.key
+vendor
+.idea
+Homestead.json
+Homestead.yaml
