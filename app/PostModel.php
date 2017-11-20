@@ -35,9 +35,6 @@ class PostModel extends Model
     public function scopeAllPostsNearDestination($query,$dist,$location)
     {
         return $query->whereRaw('ST_Distance(location,POINT('.$location.')) < '.$dist);
-        //ST_Distance() was added in MySQL 5.6.1. 
-        //Upgrade as follows: sudo apt-get install mysql-server-core-5.6 mysql-server-5.6
-        //
     }
 }
 
